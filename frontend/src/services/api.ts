@@ -27,7 +27,7 @@ export const api = {
     const formData = new FormData();
     formData.append("file", file);
 
-    const res = await fetch(`${API_URL}/upload`, {
+    const res = await fetch(`${API_URL}/api/upload`, {
       method: "POST",
       body: formData,
     });
@@ -36,7 +36,7 @@ export const api = {
   },
 
   sendMessage: async (payload: SendPayload): Promise<void> => {
-    const res = await fetch(`${API_URL}/send`, {
+    const res = await fetch(`${API_URL}/api/send`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -46,7 +46,7 @@ export const api = {
   },
 
   getMessages: async (): Promise<AdminMessage[]> => {
-    const res = await fetch(`${API_URL}/messages`);
+    const res = await fetch(`${API_URL}/api/messages`);
     return handleResponse<AdminMessage[]>(res);
   },
 };
