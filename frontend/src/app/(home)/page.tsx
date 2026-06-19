@@ -1,8 +1,12 @@
+import { ContactCard } from "./components/ContactCard";
+import { FormBox } from "./components/FormBox";
+
 export default function Home() {
-    return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <h1 className="text-4xl font-bold">Welcome to the Home Page</h1>
-            <p className="mt-4 text-lg">This is the main page of the application.</p>
-        </main>
-    );
+  return (
+    <main className="flex flex-col min-h-screen gap-4 items-center justify-center p-6 bg-gray-100">
+      <FormBox />
+
+      <ContactCard />
+    </main>
+  );
 }

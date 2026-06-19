@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Message {
+  id        String   @id @default(uuid())
+  name      String
+  city      String
+  message   String
+  mediaUrl  String?
+  mediaType String?  // "image" | "video"
+  createdAt DateTime @default(now())
+
+  @@map("messages")
+}

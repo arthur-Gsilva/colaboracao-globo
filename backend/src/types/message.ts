@@ -1,6 +1,7 @@
-export type Message = {
-    name: string,
-    city: string,
-    message: string,
-    media: string
-}
+export type CreateMessageDto = {
+  name: string;
+  city: string;
+  message: string;
+  mediaUrl?: string;
+  mediaType?: "image" | "video";
+};

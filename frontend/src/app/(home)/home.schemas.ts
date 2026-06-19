@@ -1,8 +1,11 @@
-import { z } from 'zod'
+import { z } from "zod";
 
 export const homeSchema = z.object({
-    name: z.string('Nome obrigatório').min(2, "Nome muito curto"),
-    city: z.string('Cidade obrigatória'),
-    message: z.string('Nome obrigatório').max(200, "Limite de caracteres ultrapassado"),
-    media: z.string().optional()
-})
+  name: z.string().min(2, "Nome muito curto"),
+  city: z.string().min(1, "Cidade obrigatória"),
+  message: z
+    .string()
+    .min(1, "Mensagem obrigatória")
+    .max(200, "Limite de 200 caracteres"),
+  media: z.string().optional(),
+});
