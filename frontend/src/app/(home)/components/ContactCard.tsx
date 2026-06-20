@@ -14,7 +14,7 @@ export const ContactCard = () => {
                 </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mt-8 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 w-full">
                 <a
                     href="#"
                     className="flex items-center justify-center gap-3 h-14 rounded-xl text-white font-medium bg-linear-to-r from-sky-400 to-blue-500 shadow-md hover:opacity-90 transition"
