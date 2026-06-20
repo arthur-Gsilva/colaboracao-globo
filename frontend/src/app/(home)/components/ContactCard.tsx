@@ -10,7 +10,7 @@ export const ContactCard = () => {
                 </h2>
 
                 <p className="text-gray-500">
-                    Conecte-se conosco através dos nossos canais
+                    Através dos nossos canais
                 </p>
             </div>
 
