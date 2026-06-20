@@ -4,6 +4,7 @@ import { Card } from "@/src/components/ui/Card";
 import { Toast } from "@/src/components/ui/Toast";
 import { MediaUpload } from "./MediaUpload";
 import { useHome } from "../useHome";
+import Image from "next/image";
 
 export function FormBox() {
   const { form, setMedia, toast, clearToast, isSubmitting, onSubmit } =
@@ -17,7 +18,11 @@ export function FormBox() {
   return (
     <>
       <Card>
+
         <form onSubmit={onSubmit} className="flex flex-col gap-6">
+          <Image
+            src="/logo.png" alt="Logo" width={50} height={50} 
+          />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col gap-1">
               <label className="text-sm font-medium text-gray-700" htmlFor="name">
